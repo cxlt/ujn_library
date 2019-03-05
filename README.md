@@ -60,7 +60,7 @@ mysql (关系型数据库均可)
  mysql> exit;
 ```
 
-5. **配置数据库**
+6. **配置数据库**
 
 `./Seats/db.py`文件第11行：
 
@@ -76,7 +76,7 @@ mysql://user_name:user_password@address:3306/database_name?driver=connector
 
 `database_name`: 数据库名(当前为`Seats`)
 
-6. **启动服务**
+7. **启动服务**
 
 ```
  sudo python3 runserver.py
@@ -151,6 +151,6 @@ JOBS = [
 - 新建记录时, 输入的时间的单位为小时, 修改记录时单位则为分钟；
 - `msg.log` 为前几项记录的日志和所有记录的密码错误信息；
 
-
+建议请联系 [main@lisongqian.cn](mailto://main@lisongqian.cn)
 
 **祝：考研成功！**
