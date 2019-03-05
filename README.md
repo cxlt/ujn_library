@@ -1,84 +1,156 @@
-#Í¼Êé¹İ×ùÎ»×Ô¶¯Ô¤Ô¼Ç©µ½ÏµÍ³µÄ²¿Êğ
+åŸä½œè€…ï¼š [w-devin](https://github.com/w-devin/Seat) & BinYou
 
-×÷Õß£º w-devin & BinYou
+## å®‰è£…
 
-![](http://weimg.idevin.cn/15495488187585.png-rt)
+### è¿è¡Œç¯å¢ƒ
 
-#### Ç°ÑÔ
+python3
 
-ÎªÁË¿¼ÑĞ·½±ã¸úÉáÓÑÒ»¸öÍ¨ÏüĞ´ÁËÒ»¸öÍ¼Êé¹İµÄ×Ô¶¯Ô¤Ô¼Ç©µ½ÏµÍ³, ÓÉÓÚÅäÖÃ±È½ÏÂé·³, Ò»Ö±ÒÔÀ´¶¼ÊÇ×Ô¼º¶¯ÊÖ°ï±ğÈËÅäÖÃ, ÏëĞ´¸ö½Ì³ÌÒ²Ò»Ö±Ã»ÓĞÊ±¼ä, Ö±µ½×î½ü²ÅÓĞ¿ÕÊáÀíÒ»ÏÂ²½Öè
+mysql (å…³ç³»å‹æ•°æ®åº“å‡å¯)
 
-#### ×¼±¸
+### å‡†å¤‡
 
-1. Ubuntu 16.04µÄ·şÎñÆ÷(ÆäËûÒ²¿É)
-2. ssh¹¤¾ß
+1. Ubuntu çš„æœåŠ¡å™¨(ä¼šé…ç½®pythonçš„å…¶ä»–ç”µè„‘å‡å¯)
+2. sshå·¥å…·
 
-#### ²½Öè
+### å¼€å§‹
 
-1. sshÔ¶³Ìµ½·şÎñÆ÷
-2. ´Ó Github `clone` ´úÂë, ²¢ `cd` µ½ `./Seats` Ä¿Â¼ÏÂ
+1. **ä¸‹è½½æºç **
 
- ```bash
- git clone https://github.com/w-devin/Seat.git
- cd Seat
- ```
-3. °²×°²¢ÅäÖÃºÃpython»·¾³
+```bash
+ git clone https://github.com/lisongqian/ujn_library.git ujnlib
+ cd ujnlib
+```
 
- ```bash
+2. **å®‰è£…python3ç¯å¢ƒï¼ˆç›®å‰ä¸å»ºè®®ä½¿ç”¨python3.7ï¼‰**
+
+```bash
  sudo apt-get install python3
  sudo apt-get install python3-pip
  sudo pip3 install -r requirements.txt
- ```
-4. °²×°²¢ÅäÖÃºÃ MySQL
+```
 
- ```bash
+3. **å®‰è£…MySQL**
+
+```bash
  sudo apt-get install mysql-server
- cd Database
+```
 
+4. **å¯åŠ¨MySQLæœåŠ¡**
+
+```
+ cd 
  mysql -h localhost -u root -p
- ```
-Ëæºó½¨Á¢Êı¾İ¿â
+```
 
- ```sql
- mysql> create database Seats;
- mysql> use Seats;
+5. **åˆ›å»ºæ•°æ®åº“**
 
- mysql> source admin.sql;
- mysql> source rooms.sql;
- mysql> source seats.sql;
- mysql> source tasks.sql;
+```sql
+ mysql> create database seats;
+ mysql> use seats;
+
+ mysql> source Database/admin.sql;
+ mysql> source Database/rooms.sql;
+ mysql> source Database/seats.sql;
+ mysql> source Database/tasks.sql;
 
 
  mysql> insert into admin values(0, 'wang', '123456');
- #´´½¨¹ÜÀíÔ±ÕË»§, ÆäÖĞµÚÒ»¸öÊı×Ö0ÊÇÖ¸³¬¼¶¹ÜÀíÔ±, ³¬¼¶¹ÜÀíÔ±Ö»ÄÜÓĞÒ»¸ö, ÄÜ¿´µ½²¢¹ÜÀíÆäËûËùÓĞ¹ÜÀíÔ±´´½¨µÄ¼ÇÂ¼, ÆÕÍ¨¹ÜÀíÔ±ÔòÖ»ÄÜ¿´µ½ºÍ´´½¨×Ô¼º´´½¨µÄ¼ÇÂ¼
+ #åˆ›å»ºç®¡ç†å‘˜è´¦æˆ·, å…¶ä¸­ç¬¬ä¸€ä¸ªæ•°å­—0æ˜¯æŒ‡è¶…çº§ç®¡ç†å‘˜, è¶…çº§ç®¡ç†å‘˜åªèƒ½æœ‰ä¸€ä¸ª, èƒ½çœ‹åˆ°å¹¶ç®¡ç†å…¶ä»–æ‰€æœ‰ç®¡ç†å‘˜åˆ›å»ºçš„è®°å½•, æ™®é€šç®¡ç†å‘˜åˆ™åªèƒ½çœ‹åˆ°å’Œåˆ›å»ºè‡ªå·±åˆ›å»ºçš„è®°å½•
+ mysql> exit;
+```
 
- exit
- ```
-·µ»ØÉÏ²ãÄ¿Â¼
+5. **é…ç½®æ•°æ®åº“**
 
- ```bash
- cd ../
- ```
+`./Seats/db.py`æ–‡ä»¶ç¬¬11è¡Œï¼š
 
-5. °´ĞèÅäÖÃ³ÌĞò
-- `runserver.py` ¿ÉÒÔÉèÖÃ·şÎñÔËĞĞµÄ¶Ë¿ÚºÅ
-- `config.py` ¿ÉÒÔÉèÖÃÃ¿¸öÈÎÎñµÄÖ´ĞĞÊ±¼ä
-- `./Seats/db.py` line11 ĞèÒªÅäÖÃÊı¾İ¿âµÄÖ÷»úÃûºÍÃÜÂë£¨Ö÷»úÃûÈç¹û°´±¾½Ì³ÌÓ¦Îªlocalhost£©
-- `./Seats/templates/index.html` ¿ÉÒÔÉèÖÃÍøÕ¾Ö÷Ò³µÄÏÔÊ¾ÄÚÈİ
+```
+mysql://user_name:user_password@address:3306/database_name?driver=connector
+```
 
-6. Æô¶¯·şÎñÆ÷
- ```bash
- sudo python3 runserver.py &
- ```
-ÖÁ´Ë, ±¾ÏµÍ³¿ÉÒÔÍ¨¹ı·ÃÎÊ·şÎñÆ÷ip/ÓòÃûÀ´Ê¹ÓÃ
+`user_name`: è¿æ¥æ•°æ®åº“ç”¨æˆ·å
+
+`user_password`: è¿æ¥æ•°æ®åº“å¯†ç 
+
+`address`: æ•°æ®åº“åœ°å€(å½“å‰ä¸º`localhost`æˆ–`127.0.0.1`)
+
+`database_name`: æ•°æ®åº“å(å½“å‰ä¸º`Seats`)
+
+6. å¯åŠ¨æœåŠ¡
+
+```
+ sudo python3 runserver.py
+```
+
+<p style="color:red;">æ³¨æ„ï¼Œç¨‹åºå¯åŠ¨åå½“å‰ä¼šè¯ä¸å¯å…³é—­!</p>
+
+### å…¶ä»–é…ç½®
+
+- `runserver.py` ç¬¬20è¡Œ`5555`ç«¯å£å¯æ›´æ”¹
+
+```
+    try:
+        PORT = int(environ.get('SERVER_PORT', '5555'))
+    except ValueError:
+        PORT = 5555
+```
+
+- `config.py`  è§ä»£ç æ³¨é‡Š
+
+```json
+JOBS = [
+        {
+            'id': 'booking',
+            'func': 'tasks:booking',# åº§ä½é¢„çº¦æœåŠ¡
+            'args': (),
+            'trigger': {
+                'type': 'cron',
+                'day_of_week': "mon-sun",
+                'hour': '5',       #5h
+                'minute': '0-1',   #0minåˆ°1min
+                'second': '2,5,10' #2sã€5sæˆ–10sæ—¶
+            }# æ—©æ™¨5:00:02,5:00:05,5:00:10,5:01:02,5:01:05,5:01:10æ—¶å°è¯•è¿›è¡Œæ¬¡æ—¥åº§ä½é¢„çº¦ï¼Œä¸‹åŒ
+        }
+        ,
+        {
+            'id': 'checkin',
+            'func': 'tasks:checkin',
+            'args': '',
+            'trigger': {
+                'type': 'cron',
+                'day_of_week': "mon-sun",
+                'hour': '8',
+                'minute': '0',
+                'second': '11'
+            }
+        },
+        {
+            'id': 'clearLog',
+            'func': 'tasks:clearLog',
+            'args': '',
+            'trigger': {
+                'type': 'cron',
+                'day_of_week': "mon-sun",
+                'hour': '8',
+                'minute': '0',
+                'second': '11'
+            }
+        }
+    ]
+```
+
+- è®¾ç½®ç½‘ç«™ä¸»é¡µçš„æ˜¾ç¤ºå†…å®¹
+
+æ›´æ”¹`./Seats/templates/index.html`ç¬¬5-12è¡Œå†…å®¹
+
+## å½©è›‹ï¼
+
+- é»˜è®¤æ¯å¤©æ—©ä¸Š5ç‚¹å¼€å§‹ï¼Œè¿›è¡Œ4æ¬¡é¢„çº¦å°è¯•ï¼›
+- æ·»åŠ çš„é¢„çº¦ä»»åŠ¡è‹¥ä¸åˆ é™¤åˆ™ä¼šç»§ç»­é¢„çº¦ï¼›
+- ç™»å½•æ—¶è´¦å·å¯†ç é”™è¯¯æœåŠ¡å™¨ä¼šæŠ¥é”™ï¼Œè¿”å›ä¸Šä¸€é¡µé‡æ–°ç™»å½•å³å¯ï¼›
+- æ–°å»ºè®°å½•æ—¶, è¾“å…¥çš„æ—¶é—´çš„å•ä½ä¸ºå°æ—¶, ä¿®æ”¹è®°å½•æ—¶å•ä½åˆ™ä¸ºåˆ†é’Ÿï¼›
+- `msg.log` ä¸ºå‰å‡ é¡¹è®°å½•çš„æ—¥å¿—å’Œæ‰€æœ‰è®°å½•çš„å¯†ç é”™è¯¯ä¿¡æ¯ï¼›
 
 
-#### Ò»µãÏĞ»°
 
-1. ·Ö¹¤
- - ÎÒ¸ºÔğ×ùÎ»µÄÔ¤Ô¼ºÍÇ©µ½, BinYou¸ºÔğÇ°¶ËÒ³Ãæ
-2. ÏµÍ³´æÔÚµÄÒ»Ğ©ÎÊÌâ
- - Èç¹ûµÇÂ¼Ê±ÊäÈëµÄÕËºÅÃÜÂë´íÎó»áµ¼ÖÂ·şÎñÆ÷´íÎó, ·µ»ØÉÏÒ»Ò³ÖØĞÂÊäÈë¼´¿É 
- - ĞÂ½¨¼ÇÂ¼Ê±, ÊäÈëµÄÊ±¼äµÄµ¥Î»ÎªĞ¡Ê±, ĞŞ¸Ä¼ÇÂ¼Ê±µ¥Î»ÔòÎª·ÖÖÓ
- - `msg.log` ÎªÇ°¼¸Ïî¼ÇÂ¼µÄÈÕÖ¾ºÍËùÓĞ¼ÇÂ¼µÄÃÜÂë´íÎóĞÅÏ¢
- - ÒòÎª±¾ÏµÍ³ÊÇ¿¼ÑĞÆÚ¼ä, ÎÒ(Wang)ºÍBinYouÍ¨Ïü¸Ï¹¤ÖÆ×÷¶øÀ´, ¿ÉÄÜ»á´æÔÚÒ»Ğ©Ææ¹ÖµÄbug
+**ç¥ï¼šè€ƒç ”æˆåŠŸï¼**
