@@ -76,7 +76,7 @@ mysql://user_name:user_password@address:3306/database_name?driver=connector
 
 `database_name`: 数据库名(当前为`Seats`)
 
-6. 启动服务
+6. **启动服务**
 
 ```
  sudo python3 runserver.py
@@ -97,7 +97,7 @@ mysql://user_name:user_password@address:3306/database_name?driver=connector
 
 - `config.py`  见代码注释
 
-```json
+```
 JOBS = [
         {
             'id': 'booking',
