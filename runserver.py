@@ -25,5 +25,5 @@ if __name__ == '__main__':
     LOG_FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
     logging.basicConfig(filename='msg.log', level=logging.WARNING, format=LOG_FORMAT)
 
-    app.run(HOST, PORT)
-    # app.run(host='0.0.0.0', port=80)
+    # app.run(HOST, PORT)
+    app.run(host='0.0.0.0', port=5555)
