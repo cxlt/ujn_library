@@ -8,7 +8,6 @@ from Seats.db import select_all_tasks
 
 
 def Token(username, password):
-    print("login start")
     url = "http://seat.ujn.edu.cn/rest/auth?username=%s&password=%s" % (username, password)
     msg_login = requests.get(url).json()
     if msg_login.get('status') == 'success':
@@ -20,7 +19,6 @@ def Token(username, password):
 
 
 def booking():
-    print("booking start")
     tasks = select_all_tasks()
 
     for x in tasks:
@@ -39,7 +37,6 @@ def booking():
 
 
 def checkin():
-    print("checkin start")
     tasks = select_all_tasks()
 
     for x in tasks:

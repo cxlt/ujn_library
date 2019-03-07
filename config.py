@@ -9,7 +9,7 @@ class Config(object):
                 'day_of_week': "mon-sun",
                 'hour': '5',
                 'minute': '0-1',
-                'second': '2,5,10'
+                'second': '0,1,2,4'
             }
         }
         ,
